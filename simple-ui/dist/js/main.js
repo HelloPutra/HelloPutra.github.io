@@ -1,20 +1,22 @@
+/*
+# SimpleUI By Muh Kanda Wibawa Putra (HelloPutra)
+# Github : https://github.com/HelloPutra
+# This Template Is FREE!
+# Released under the MIT license
+# http://opensource.org/licenses/MIT
+# For Information : surel.muhkanda@gmail.com
+*/
 var $duration = 1000;
 $(document).ready(function(){
 	// - ACCOUNT DROPDOWN
 	$('.ui.admindropdown').dropdown({
-		transition: 'swing down',
+		transition: 'drop',
 		on : 'click',
-		duration  : $duration			
-	});
-
-	$('.ui.sidebardropdown').dropdown({
-		transition: 'swing left',
-		on : 'click',
-		duration  : $duration
+		duration  : 500		
 	});
 	$('.ui.moredropdown').dropdown({
-		transition: 'swing down',
-		duration  : $duration
+		transition: 'fade down',
+		duration  :300
 	});
 
 	// - SHOW & HIDE SIDEBAR
@@ -33,14 +35,7 @@ $(document).ready(function(){
 		    duration  : $duration
 		  });
     });
-    // - DATA TABLES
-    $(document).ready(function() {
-	    $('#example').DataTable();
-	} );
-	var table = $('#example').DataTable( {
-        lengthChange: false,
-        buttons: [ 'copy', 'excel', 'pdf', 'colvis' ]
-    } );
-    table.buttons().container()
-        .appendTo( $('div.eight.column:eq(0)', table.table().container()) );
+    $(".ui.accordion").accordion({
+		exclusive: false
+	});
 });
